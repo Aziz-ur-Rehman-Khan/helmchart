@@ -80,3 +80,15 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+my:
+  custom:
+    data:
+  environment:
+    flag: true
+  mvalues:
+    - Development
+    - Testing
+    - Staging
+    - Production
+
