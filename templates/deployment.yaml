@@ -1,12 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-  {{.Values.my.custom.data | default "Enviorment"| upper }}
-  {{- if .Values.my.environment.flag }}
-  {{- "Enviornment True" | nindent 2}}
-  {{- end}}
-  {{- with .Values.my.mvalues }}
-  {{- toYaml .| nindent 2 }}
-  {{- end}}
+  {{- template "helmchart.enviornment" .}}
 metadata:
   name: {{ include "helmchart.fullname" . }}
   labels:

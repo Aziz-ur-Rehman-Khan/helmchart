@@ -1,4 +1,14 @@
 {{/*
+My Enviornments
+*/}}
+{{- define "helmchart.enviornment" -}}
+{{- with .Values.my.mvalues }}
+Enviornments:
+  {{- toYaml .| nindent 2 }}
+  {{- end}}
+{{- end }}
+
+{{/*
 Expand the name of the chart.
 */}}
 {{- define "helmchart.name" -}}
